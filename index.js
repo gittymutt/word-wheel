@@ -2,8 +2,6 @@ let word = "benediction"
 let newWordIndex = 0
 function sayGuess() {
   const userAnswer = document.querySelector("#answer-box").value.trim()
-//   const rightAnswer = document.querySelector("#answer")
-//   const word  = rightAnswer.textContent 
   if (userAnswer == word) {
     alert("You win!!")
   } else {
@@ -14,8 +12,6 @@ function sayGuess() {
 const answer = document.querySelector("#answer")
 const container = document.querySelector("#container")
 const guessButton = document.querySelector("#answer-button")
-// guessButton.addEventListener("click", restartGame )
-
 const newGameButton = document.querySelector("#new-game-button")
 newGameButton.addEventListener("click", () => {
   const newWord = wordList[newWordIndex]
@@ -58,7 +54,6 @@ function setBoard(word) {
   console.log(answer.textContent)
   guessButton.removeEventListener("click", sayGuess)
   guessButton.addEventListener("click", sayGuess )
-  // alert("word is now " + word)
   let letterCount = word.length
   container.innerHTML = ''
   // shift the letters
@@ -73,7 +68,6 @@ function setBoard(word) {
   if (doReverse) {
     word = [...word].reverse().join("")
   }
-
 
   // replace a random letter with a question mark
   let randSlot = Math.floor(Math.random() * letterCount);
@@ -93,7 +87,6 @@ function setBoard(word) {
 
 }
 
-
 setBoard(word)
 
 const wordList = [
@@ -102,27 +95,3 @@ const wordList = [
   "fascist",
   "obedience"
 ] 
-
-
-
-
-
-// let span = document.createElement("span")
-// let text = document.createTextNode("1")
-// el.appendChild(span)
-// span.appendChild(text)
-// span.classList.add("block-span")
-// el.style.cssText += "transform: rotate(90deg); "
-// span.style.cssText += "transform: rotate(-90deg);"
-// container.appendChild(el)
-
-
-// el = document.createElement("p")
-// span = document.createElement("span")
-// text = document.createTextNode("2")
-// el.appendChild(span)
-// span.appendChild(text)
-// span.classList.add("block-span")
-// el.style.cssText += "transform: rotate(190deg); "
-// span.style.cssText += "transform: rotate(-190deg);"
-// container.appendChild(el)
