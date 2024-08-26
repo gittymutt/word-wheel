@@ -26,6 +26,7 @@ newGameButton.addEventListener("click", () => {
   restartGame()
 })
 
+
 function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
     return str.substring(0,index) + chr + str.substring(index+1);
@@ -66,7 +67,6 @@ function setBoard(word) {
   wordArray = word.split('')
   wordArray = wordArray.concat(wordArray.splice(0,randShift))
   word = wordArray.join('')
-    console.log(word)
 
   // maybe reverse the letters
   let doReverse = Math.floor(Math.random() * 2);
@@ -91,8 +91,6 @@ function setBoard(word) {
 
 }
 
-setBoard(word)
-
 
 const wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','stable','simper','glib',
   'retrieve','renegade','redolent','rebuke','range','querulous','proximity','prior','platitude',
@@ -102,3 +100,5 @@ const wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','st
   'frustrate','fluctuate','fiasco','feasible','fatuous','exploit','expatiate','evaluate','estimate',
   'entreat','accede','effete','edict','divulge','distribute','discursive','disconcert','diffident',
   'didactic','deplete','deference','zealot','zenith']
+
+  restartGame()
