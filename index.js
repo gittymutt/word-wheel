@@ -17,7 +17,6 @@ newGameButton.addEventListener("click", () => {
   newWordIndex++
   word = newWord
   setBoard(newWord)
-
 })
 
 function setCharAt(str,index,chr) {
