@@ -106,7 +106,6 @@ function setBoard(word) {
   }
 }
 
-
 let wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','stable','simper','glib',
   'retrieve','renegade','redolent','rebuke','range','querulous','proximity','prior','platitude',
   'permeate','peremptory','bestow','credence','corpulent','copious','construe','cogent','coalesce',
