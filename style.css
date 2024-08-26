@@ -5,9 +5,10 @@ html, body {
   body {
     display: flex;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    row-gap: 20px;
   }
   
   #container {
@@ -29,7 +30,7 @@ html, body {
   .block-span {
     display: block;
   }
-  
+ 
   /* Bars */
   
   .bar {
