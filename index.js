@@ -48,7 +48,10 @@ function putLetter(letter, angle) {
 }
 
 function setBoard(word) {
-  document.querySelector("#answer-box").focus()
+
+  const answerBox = document.querySelector("#answer-box")
+  answerBox.focus()
+  answerBox.value = ''
   const answer = document.querySelector("#answer")
   answer.textContent = word
   console.log(answer.textContent)
