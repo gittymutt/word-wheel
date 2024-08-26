@@ -18,22 +18,25 @@ function sayGuess() {
   }
 }
 
-  function shuffleArray(arr) {
-    let randIndex = 0
-    for (let i=0;i < 200;++i) {
-      randIndex = Math.floor(Math.random() * arr.length)
-      arr = arr.slice(0, randIndex).concat(arr.slice(randIndex+1)) 
-      arr.push(arr[randIndex])
-    }
-    return arr
+function shuffleArray(arr) {
+  let randIndex = 0
+  for (let i=0;i < 200;++i) {
+    randIndex = Math.floor(Math.random() * arr.length)
+    arr = arr.slice(0, randIndex).concat(arr.slice(randIndex+1)) 
+    arr.push(arr[randIndex])
   }
+  return arr
+}
 
 const container = document.querySelector("#container")
 const guessButton = document.querySelector("#answer-button")
 const newGameButton = document.querySelector("#new-game-button")
+
 newGameButton.addEventListener("click", () => {
   restartGame()
 })
+
+guessButton.addEventListener("click", sayGuess )
 
 
 function setCharAt(str,index,chr) {
@@ -67,10 +70,9 @@ function setBoard(word) {
   answerBox.focus()
   answerBox.value = ''
   const answer = document.querySelector("#answer")
-  guessButton.removeEventListener("click", sayGuess)
-  guessButton.addEventListener("click", sayGuess )
   let letterCount = word.length
   container.innerHTML = ''
+
   // shift the letters
   let randShift = Math.floor(Math.random() * letterCount);
   wordArray = word.split('')
@@ -97,7 +99,6 @@ function setBoard(word) {
     word = word.slice(1)
     putBar(angle-starter)
   }
-
 }
 
 
@@ -110,5 +111,4 @@ let wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','stab
   'entreat','accede','effete','edict','divulge','distribute','discursive','disconcert','diffident',
   'didactic','deplete','deference','zealot','zenith']
 wordList = shuffleArray(wordList)
-console.log("Wordlist: " + wordList)
 restartGame()
