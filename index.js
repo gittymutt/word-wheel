@@ -9,7 +9,6 @@ function sayGuess() {
   }
 }
 
-const answer = document.querySelector("#answer")
 const container = document.querySelector("#container")
 const guessButton = document.querySelector("#answer-button")
 const newGameButton = document.querySelector("#new-game-button")
@@ -53,8 +52,6 @@ function setBoard(word) {
   answerBox.focus()
   answerBox.value = ''
   const answer = document.querySelector("#answer")
-  answer.textContent = word
-  console.log(answer.textContent)
   guessButton.removeEventListener("click", sayGuess)
   guessButton.addEventListener("click", sayGuess )
   let letterCount = word.length
