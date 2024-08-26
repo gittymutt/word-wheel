@@ -80,7 +80,6 @@ function setBoard(word) {
 
   let degrees = 360 / letterCount;
   let starter = degrees / 2
-  console.log(word)
   let letter = word[0]
   letter = letter.slice(1)
   for (let angle  = 0 + starter; angle < 360 + starter+1; angle = angle + degrees) {
