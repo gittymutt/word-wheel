@@ -18,6 +18,16 @@ function sayGuess() {
   }
 }
 
+  function shuffleArray(arr) {
+    let randIndex = 0
+    for (let i=0;i < 200;++i) {
+      randIndex = Math.floor(Math.random() * arr.length)
+      arr = arr.slice(0, randIndex).concat(arr.slice(randIndex+1)) 
+      arr.push(arr[randIndex])
+    }
+    return arr
+  }
+
 const container = document.querySelector("#container")
 const guessButton = document.querySelector("#answer-button")
 const newGameButton = document.querySelector("#new-game-button")
@@ -91,7 +101,7 @@ function setBoard(word) {
 }
 
 
-const wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','stable','simper','glib',
+let wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','stable','simper','glib',
   'retrieve','renegade','redolent','rebuke','range','querulous','proximity','prior','platitude',
   'permeate','peremptory','bestow','credence','corpulent','copious','construe','cogent','coalesce',
   'circumspect','candid','callous','bulwark','bucolic','bland','credible','belie','banter','bane',
@@ -99,5 +109,6 @@ const wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','st
   'frustrate','fluctuate','fiasco','feasible','fatuous','exploit','expatiate','evaluate','estimate',
   'entreat','accede','effete','edict','divulge','distribute','discursive','disconcert','diffident',
   'didactic','deplete','deference','zealot','zenith']
-
-  restartGame()
+wordList = shuffleArray(wordList)
+console.log("Wordlist: " + wordList)
+restartGame()
