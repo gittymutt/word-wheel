@@ -23,7 +23,7 @@ const container = document.querySelector("#container")
 const guessButton = document.querySelector("#answer-button")
 const newGameButton = document.querySelector("#new-game-button")
 newGameButton.addEventListener("click", () => {
-  
+  restartGame()
 })
 
 function setCharAt(str,index,chr) {
