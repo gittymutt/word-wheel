@@ -2,16 +2,20 @@ let word = "benediction"
 let newWordIndex = 0
 
 function restartGame() {
-
+  const newWord = wordList[newWordIndex]
+  newWordIndex++
+  word = newWord
+  setBoard(newWord)
 }
 
 function sayGuess() {
-  const userAnswer = document.querySelector("#answer-box").value.trim()
-  if (userAnswer == word) {
+  const userAnswer = document.querySelector("#answer-box")
+  if (userAnswer.value.trim() == word) {
     alert("You win!!")
-
+    restartGame()
   } else {
     alert("That's not it. Try again.")
+    userAnswer.focus()  
   }
 }
 
@@ -19,10 +23,7 @@ const container = document.querySelector("#container")
 const guessButton = document.querySelector("#answer-button")
 const newGameButton = document.querySelector("#new-game-button")
 newGameButton.addEventListener("click", () => {
-  const newWord = wordList[newWordIndex]
-  newWordIndex++
-  word = newWord
-  setBoard(newWord)
+  
 })
 
 function setCharAt(str,index,chr) {
@@ -52,7 +53,6 @@ function putLetter(letter, angle) {
 }
 
 function setBoard(word) {
-
   const answerBox = document.querySelector("#answer-box")
   answerBox.focus()
   answerBox.value = ''
