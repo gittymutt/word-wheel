@@ -7,7 +7,15 @@ for line in Lines:
     word_list.append(re.split(" ", line.strip())[0])
 # print(word_list)
 
-json = "wordList = "
+javascript = "wordList = ["
+for word in word_list:
+    if word != '':
+        javascript += "'" + word + "',"
+
+length = len(javascript)
+javascript = javascript[:length-1]
+
+javascript += "]"
 outfile = open('wordlist-json.txt', 'w')
-outfile.writelines(json)
+outfile.writelines(javascript)
 outfile.close()

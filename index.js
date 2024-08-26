@@ -93,9 +93,18 @@ function setBoard(word) {
 
 setBoard(word)
 
-const wordList = [
-  "communist",
-  "liberal",
-  "fascist",
-  "obedience"
-] 
+// const wordList = [
+//   "communist",
+//   "liberal",
+//   "fascist",
+//   "obedience"
+// ] 
+
+const wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','stable','simper','glib',
+  'retrieve','renegade','redolent','rebuke','range','querulous','proximity','prior','platitude',
+  'permeate','peremptory','bestow','credence','corpulent','copious','construe','cogent','coalesce',
+  'circumspect','candid','callous','bulwark','bucolic','bland','credible','belie','banter','bane',
+  'avarice','augment','askance','arbitrary','ambiguous','alacrity','accord','ensue','gibe','generate',
+  'frustrate','fluctuate','fiasco','feasible','fatuous','exploit','expatiate','evaluate','estimate',
+  'entreat','accede','effete','edict','divulge','distribute','discursive','disconcert','diffident',
+  'didactic','deplete','deference','zealot','zenith']
