@@ -29,7 +29,6 @@
     circumspect (adjective)
     candid (adjective)
     callous (adjective)
-
     bulwark (noun)
     bucolic (adjective)
     bland (adjective)
@@ -70,4 +69,3 @@
     deference (noun)
     zealot (noun)
     zenith (noun)
-
