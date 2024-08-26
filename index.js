@@ -93,12 +93,6 @@ function setBoard(word) {
 
 setBoard(word)
 
-// const wordList = [
-//   "communist",
-//   "liberal",
-//   "fascist",
-//   "obedience"
-// ] 
 
 const wordList = ['waive','vilify','vestige','turgid','sustain','stupendous','stable','simper','glib',
   'retrieve','renegade','redolent','rebuke','range','querulous','proximity','prior','platitude',
