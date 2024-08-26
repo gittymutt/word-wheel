@@ -1,9 +1,9 @@
 let word = "benediction"
-let newWordIndex = 0;
+let newWordIndex = 0
 function sayGuess() {
   const userAnswer = document.querySelector("#answer-box").value.trim()
-  const rightAnswer = document.querySelector("#answer")
-  const word = rightAnswer.textContent 
+//   const rightAnswer = document.querySelector("#answer")
+//   const word  = rightAnswer.textContent 
   if (userAnswer == word) {
     alert("You win!!")
   } else {
@@ -20,7 +20,9 @@ const newGameButton = document.querySelector("#new-game-button")
 newGameButton.addEventListener("click", () => {
   const newWord = wordList[newWordIndex]
   newWordIndex++
+  word = newWord
   setBoard(newWord)
+
 })
 
 function setCharAt(str,index,chr) {
