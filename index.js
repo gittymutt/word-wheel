@@ -1,11 +1,17 @@
 let word = "benediction"
 let newWordIndex = 0
+
+function restartGame() {
+
+}
+
 function sayGuess() {
   const userAnswer = document.querySelector("#answer-box").value.trim()
   if (userAnswer == word) {
     alert("You win!!")
+
   } else {
-    alert("You lose. the word is " + word)
+    alert("That's not it. Try again.")
   }
 }
 
