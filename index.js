@@ -1,4 +1,3 @@
-let word = "benediction"
 let newWordIndex = 0
 
 function restartGame() {
