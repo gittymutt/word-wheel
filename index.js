@@ -10,7 +10,7 @@ function restartGame() {
 function sayGuess() {
   const userAnswer = document.querySelector("#answer-box")
   if (userAnswer.value.trim() == word) {
-    alert("You win!!")
+    alert("You win! Try another!")
     restartGame()
   } else {
     alert("That's not it. Try again.")
@@ -31,13 +31,18 @@ function shuffleArray(arr) {
 const container = document.querySelector("#container")
 const guessButton = document.querySelector("#answer-button")
 const newGameButton = document.querySelector("#new-game-button")
+const answerBox = document.querySelector("#answer-box")
 
 newGameButton.addEventListener("click", () => {
   restartGame()
 })
 
 guessButton.addEventListener("click", sayGuess )
-
+answerBox.addEventListener("keydown", ({key}) => {
+  if (key === "Enter") {
+      sayGuess()
+  }
+})
 
 function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
@@ -66,7 +71,7 @@ function putLetter(letter, angle) {
 }
 
 function setBoard(word) {
-  const answerBox = document.querySelector("#answer-box")
+  
   answerBox.focus()
   answerBox.value = ''
   const answer = document.querySelector("#answer")
