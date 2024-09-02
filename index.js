@@ -9,7 +9,7 @@ function restartGame() {
 
 function sayGuess() {
   const userAnswer = document.querySelector("#answer-box")
-  if (userAnswer.value.trim() == word) {
+  if (userAnswer.value.trim().toLowerCase() == word) {
     alert("You win! Try another!")
     restartGame()
   } else {
